@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+
+<!-- Load required Bootstrap and BootstrapVue CSS -->
+<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+<!-- Load polyfills to support older browsers -->
+<script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+
+<!-- Load Vue followed by BootstrapVue -->
+<script src="//unpkg.com/vue@latest/dist/vue.js"></script>
+<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+<!-- Load the following for BootstrapVueIcons support -->
+<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+
+</head>
+<body>
+
+<header id="header">
+	<h1>Choose your appartments</h1>
+</header>
+
+
+<div id="app">
+  <div>
+
+  	<b-container>
+	  <b-row class="row align-items-center">
+	    <b-col>
+	    	<div>
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 900 600" style="enable-background:new 0 0 900 600;" xml:space="preserve">
+				<g id="image">
+					<image style="overflow:visible;" width="900" height="600" xlink:href="img/building2.jpg">
+					</image>
+				</g>
+				<g id="apartments">
+					<polygon id="s1" @mouseover="selectSvg" @mouseleave="closePopups" class="st0 p-items" opacity="0.2" fill="#03FC7E" points="724.7,339.3 665.7,355.7 585,349.3 517.7,375.3 517.7,326.7 584,286.7 665.3,296.3 724.7,266.3 	"/>
+					<polygon id="s2" @mouseover="selectSvg" @mouseleave="closePopups" class="st1 p-items" opacity="0.2" fill="#03FC7E" points="510,320.8 524.3,320.8 584,286.7 662.6,296 724.7,266.3 724.7,195.7 660.3,236.3 582.3,224.7 
+						510,270.7 	"/>
+					<polygon id="s3" @mouseover="selectSvg" @mouseleave="closePopups" class="st2 p-items" opacity="0.2" fill="#03FC7E" points="138.3,163.3 138.3,202.7 193.3,189 295,189.7 295,150 193.3,147.7 	"/>
+					<polygon id="s4" @mouseover="selectSvg" @mouseleave="closePopups" class="st3 p-items" opacity="0.2" fill="#03FC7E" points="138.3,202.1 138.3,238.3 193.3,225.7 295,226.4 295,189.8 193.3,187.7 	"/>
+					<polygon id="s5" @mouseover="selectSvg" @mouseleave="closePopups" class="st4 p-items" opacity="0.2" fill="#03FC7E" points="138.3,238.6 138.3,272.7 193.3,260.8 295,261.4 295,227 193.3,225 	"/>
+					<polygon id="s6" @mouseover="selectSvg" @mouseleave="closePopups" class="st5 p-items" opacity="0.2" fill="#03FC7E" points="138.3,273.6 138.3,307.7 193.3,295.8 295,296.4 295,262 193.3,260 	"/>
+				</g>
+				</svg>
+				<b-popover ref="popover1" target="s1" title="Apartments #1">
+			    	Rooms: <strong>5</strong>
+			    </b-popover>
+			    <b-popover ref="popover2" target="s2" title="Apartments #2">
+			    	Rooms: <strong>6</strong>
+			    </b-popover>
+			    <b-popover ref="popover3" target="s3" title="Apartments #3">
+			    	Rooms: <strong>1</strong>
+			    </b-popover>
+			    <b-popover ref="popover4" target="s4" title="Apartments #4">
+			    	Rooms: <strong>1</strong>
+			    </b-popover>
+			    <b-popover ref="popover5" target="s5" title="Apartments #5">
+			    	Rooms: <strong>2</strong>
+			    </b-popover>
+			    <b-popover ref="popover6" target="s6" title="Apartments #6">
+			    	Rooms: <strong>3</strong>
+			    </b-popover>
+			</div>
+	    </b-col>
+	    <b-col>
+	    	<b-list-group>
+			  <b-list-group-item id="li1" @mouseover="selectList" class="listitems"><span class="ltext">Apartments #1</span><span class="rtext">178 000$</span></b-list-group-item>
+			  <b-list-group-item id="li2" @mouseover="selectList" class="listitems"><span class="ltext">Apartments #2</span><span class="rtext">200 000$</span></b-list-group-item>
+			  <b-list-group-item id="li3" @mouseover="selectList" class="listitems"><span class="ltext">Apartments #3</span><span class="rtext">99 000$</span></b-list-group-item>
+			  <b-list-group-item id="li4" @mouseover="selectList" class="listitems"><span class="ltext">Apartments #4</span><span class="rtext">132 000$</span></b-list-group-item>
+			  <b-list-group-item id="li5" @mouseover="selectList" class="listitems"><span class="ltext">Apartments #5</span><span class="rtext">44 000$</span></b-list-group-item>
+			  <b-list-group-item id="li6" @mouseover="selectList" class="listitems"><span class="ltext">Apartments #6</span><span class="rtext">65 000$</span></b-list-group-item>
+			</b-list-group>
+	    </b-col>
+	  </b-row>
+	</b-container>
+
+	<h3 class="plan"> Building Plan </h3>
+	<b-img center src="img/plan.jpg" fluid alt="Responsive image"></b-img>
+ 
+  </div>
+</div>
+
+<script type="module" src="src/index.js"></script>
+
+</body>
+</html>

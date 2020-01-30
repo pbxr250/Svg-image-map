@@ -1,0 +1,49 @@
+
+
+#apartments .st0a,
+	#apartments .st1a,
+	#apartments .st2a,
+	#apartments .st3a,
+	#apartments .st4a,
+	#apartments .st5a {
+	fill: #03FC7E;
+}
+
+
+
+#apartments .st0a:hover,
+	#apartments .st1a:hover,
+	#apartments .st2a:hover,
+	#apartments .st3a:hover,
+	#apartments .st4a:hover,
+	#apartments .st5a:hover {
+    fill: #BF55EC;
+}
+
+
+#header {
+    background-image: linear-gradient(#bc9f9f, white);
+    height: 64px;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+#app {
+    margin-top: 1rem;
+}
+
+.ltext {
+	
+}
+
+.rtext {
+	float: right;
+}
+
+h3.plan {
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
